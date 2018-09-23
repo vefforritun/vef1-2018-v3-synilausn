@@ -1,0 +1,145 @@
+
+/* almennar skilgreiningar */
+
+html {
+  font-size: 18px;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #999;
+
+  font-size: 2em;
+}
+
+h2 {
+  margin: 0;
+  color: #999;
+
+  /* 30/18 = 1.666667 */
+  font-size: 1.666667em;
+}
+
+h3 {
+  font-size: 1em;
+  margin: 0;
+}
+
+p {
+  font-size: 1em;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+button {
+  display: block;
+  border: 5px solid #999;
+  border-left-color: #666;
+  border-bottom-color: #666;
+  font-size: 1em;
+}
+
+button:hover {
+  border-width: 10px;
+  border-top-color: #666;
+  border-right-color: #666;
+  border-bottom-color: #999;
+  border-left-color: #999;
+}
+
+/* texti */
+
+.card-text p:first-line {
+  background-color: #ccc;
+}
+
+.card-text p:first-letter {
+  /* 36/18 = 2 */
+  font-size: 2em;
+}
+
+.card-text p + p {
+  /* 50/16 = 3.125 */
+  margin-left: 3.125em;
+
+  /* 16/18 = 0.8888889 */
+  font-size: 0.8888889em;
+}
+
+.card-text p + p:first-letter {
+  /* 36/16 = 2.25 */
+  font-size: 2.25em;
+}
+
+.card-text p + p:first-line {
+  background-color: #ddd;
+}
+
+.card-text p + p + p {
+  /* 100/14 = 7.142857143 */
+  margin-left: 7.142857143em;
+
+  /* 14/18 = 0.7777778 */
+  font-size: 0.7777778em;
+}
+
+.card-text p + p + p:first-letter {
+  /* 36/14 = 2.571428571*/
+  font-size: 2.571428571em;
+}
+
+.card-text p + p + p:first-line {
+  background-color: #eee;
+}
+
+/* cards */
+
+.card-section h2 {
+  display: none;
+}
+
+.cards {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 37em; /* 37 * 18 = 666 */
+}
+
+.cards::after {
+  content: 'Ekki meira efni';
+  display: block;
+  margin-top: 1em;
+  border-top: 1px solid #c00;
+  padding-top: 1em;
+}
+
+.card {
+  display: inline-block;
+  width: 10em; /* 18 * 10 = 180 */
+  height: 10em;
+  margin: 0.5em; /* 0.5 * 18 = 9 */
+  border: 1px solid #000;
+  padding: 0.5em;
+
+  background-color: #fff;
+  color: #333;
+}
+
+.card:nth-child(2n) {
+  background-color: #333;
+  color: #fff;
+}
+
+.cards:hover .card:nth-child(2n) {
+  background-color: #fff;
+  color: #333;
+}
+
+.cards:hover .card:nth-child(2n+1) {
+  background-color: #333;
+  color: #fff;
+}
+
+.cards button {
+  margin: 2em auto;
+}
